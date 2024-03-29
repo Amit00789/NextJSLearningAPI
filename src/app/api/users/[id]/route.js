@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { user } from "../../../../db";
+import { user } from "../../../../utils/db";
 
 export function GET(request, content) {
   const data = user.filter((item) => item.id == content.params.id);
@@ -24,5 +24,18 @@ export async function PUT(request, content) {
   return NextResponse.json({ result: payload }, { status: 200 });
 }
 
+export function DELETE(request, content){
+  let id = content.params.id;
+  if(!id){
+    return NextResponse.json(
+      { result: "please send the required fields to be deleted from the records !!" , success : false},
+      { status: 400 }
+    );
+  } 
+  return NextResponse.json(
+    { result: "User has been deleted from the records !!" , success : true},
+    { status: 200 }
+  );
+}
 //that's how we create put apis
 // it should be hadled with dynamic route

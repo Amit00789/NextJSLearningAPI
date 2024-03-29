@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import "./style.css";
+import "../style.css";
 export default function AddUser() {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");

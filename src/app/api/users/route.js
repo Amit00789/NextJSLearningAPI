@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { user } from "../../../db";
+import { user } from "../../../utils/db";
 
 export function GET(request) {
   const data = user;
