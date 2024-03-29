@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import "./style.css";
+import "../../../style.css";
 
 export default function AddUser({ params }) {
   const id = params.userId;
