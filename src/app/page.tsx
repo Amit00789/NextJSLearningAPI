@@ -9,6 +9,12 @@ export default function Home() {
       <br />
       <br />
       <Link href="/addUser">Add User</Link>
+      <br />
+      <br />
+      <Link href="/addUserDb">Add User Into Database</Link>
+      <br />
+      <br />
+      <Link href="/getUserDb">Get Users From Database</Link>
     </main>
   );
 }
