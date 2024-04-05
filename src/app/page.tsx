@@ -15,6 +15,9 @@ export default function Home() {
       <br />
       <br />
       <Link href="/getUserDb">Get Users From Database</Link>
+      <br />
+      <br />
+      <Link href="/uploadImage">Upload Image</Link>
     </main>
   );
 }

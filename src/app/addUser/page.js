@@ -12,7 +12,6 @@ export default function AddUser() {
       body: JSON.stringify({ name, age, email }),
     });
     res = await res.json();
-    console.log(res);
   };
   return (
     <div className="add-user">

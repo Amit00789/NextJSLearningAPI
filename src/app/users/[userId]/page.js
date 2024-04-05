@@ -1,7 +1,7 @@
 export async function getUser(id) {
   let data = await fetch(`http://localhost:3000/api/users/${id}`);
   data = await data.json();
-  return data.data;
+  return data;
 }
 export default async function User({ params }) {
   const users = await getUser(params.userId);
