@@ -25,7 +25,6 @@ export default function AddUser({ params }) {
       body: JSON.stringify({ name, age, city }),
     });
     res = await res.json();
-    console.log(res);
   };
 
   return (

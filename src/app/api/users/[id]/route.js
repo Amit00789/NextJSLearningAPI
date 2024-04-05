@@ -3,7 +3,7 @@ import { user } from "../../../../utils/db";
 
 export function GET(request, content) {
   const data = user.filter((item) => item.id == content.params.id);
-  return NextResponse.json({ result: data[0] }, { status: 200 });
+  return NextResponse.json({ result: data }, { status: 200 });
 }
 
 export async function PUT(request, content) {
