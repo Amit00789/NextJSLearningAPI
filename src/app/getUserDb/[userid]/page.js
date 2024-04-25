@@ -19,7 +19,7 @@ export default function UpdateUser({params}) {
   }
   useEffect(() => {
     getUserRecord()
-  },[])
+  })
 
   async function updateUserRecord(){
     let data = await fetch("http://localhost:3000/api/userdb/"+params.userid, {
