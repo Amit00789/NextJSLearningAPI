@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import "../../style.css";
+import { useRouter } from "next/navigation";
 export default function UpdateUser({params}) {
+  const router = useRouter();
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
   const [tag, setTag] = useState("");
@@ -17,7 +19,7 @@ export default function UpdateUser({params}) {
   }
   useEffect(() => {
     getUserRecord()
-  },[])
+  })
 
   async function updateUserRecord(){
     let data = await fetch("http://localhost:3000/api/userdb/"+params.userid, {
@@ -27,6 +29,7 @@ export default function UpdateUser({params}) {
     data = await data.json()
     if(data.success == true){
         alert("User Details has been updated")
+        router.push('/getUserDb')
     }
   }
   return (
