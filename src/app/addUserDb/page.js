@@ -1,7 +1,9 @@
 "use client";
 import { useState } from "react";
 import "../style.css";
+import { useRouter } from "next/navigation";
 export default function AddUser() {
+  const router = useRouter()
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
   const [tag, setTag] = useState("");
@@ -14,6 +16,10 @@ export default function AddUser() {
     res = await res.json();
     if(res.success){
         alert("User has been added into database")
+        router.push('/getUserDb')
+        setCity('');
+        setName('')
+        setTag('')
     }
   };
   return (
